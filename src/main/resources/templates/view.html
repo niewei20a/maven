@@ -1,0 +1,1137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>个人中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta property="og:title" content="常青藤家教网"/>
+    <meta property="xn:admins" content="251857599"/>
+    <meta property="xn:page_id" content="698000103"/>
+    <meta property="og:type" content="常青藤家教网"/>
+    <meta property="og:url" content="http://www.jiajiao400.com/"/>
+    <meta property="og:site_name" content="常青藤家教网"/>
+    <meta property="og:image" content="http://www.jiajiao400.com/images/logo.gif"/>
+    <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css2014/jiajiao400_layout.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/ui-lightness/jquery-ui-1.8.7.custom.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/ucenter.css"/>
+    <script type="text/javascript" src="http://www.jiajiao400.com/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://www.jiajiao400.com/js/jquery-ui-1.8.7.custom.min.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18175558-1']);
+        _gaq.push(['_addOrganic', 'm.baidu', 'word']);
+        _gaq.push(['_addOrganic', 'wap.baidu', 'word']);
+        _gaq.push(['_addOrganic', 'baidu.mobi', 'word']);
+        _gaq.push(['_addOrganic', 'image.baidu', 'word']);
+        _gaq.push(['_addOrganic', 'baidu', 'wd']);
+        _gaq.push(['_addOrganic', 'baidu', 'word']);
+        _gaq.push(['_addOrganic', 'baidu', 'kw']);
+        _gaq.push(['_addOrganic', 'baidu', 'q1']);
+        _gaq.push(['_addOrganic', 'baidu', 'q2']);
+        _gaq.push(['_addOrganic', 'baidu', 'q3']);
+        _gaq.push(['_addOrganic', 'baidu', 'q4']);
+        _gaq.push(['_addOrganic', 'baidu', 'q5']);
+        _gaq.push(['_addOrganic', 'baidu', 'q6']);
+        _gaq.push(['_addOrganic', 'image.soso', 'w']);
+        _gaq.push(['_addOrganic', 'wap.soso', 'key']);
+        _gaq.push(['_addOrganic', 'soso', 'w']);
+        _gaq.push(['_addOrganic', 'bing', 'q']);
+        _gaq.push(['_addOrganic', 'youdao', 'q']);
+        _gaq.push(['_addOrganic', 'so.360', 'q']);
+        _gaq.push(['_addOrganic', 'so', 'q']);
+        _gaq.push(['_addOrganic', '360', 'q']);
+        _gaq.push(['_addOrganic', 'image.so', 'q']);
+        _gaq.push(['_addOrganic', 'pic.sogou', 'query']);
+        _gaq.push(['_addOrganic', 'wap.sogou', 'keyword']);
+        _gaq.push(['_addOrganic', 'm.sogou', 'keyword']);
+        _gaq.push(['_addOrganic', 'sogou', 'query']);
+        _gaq.push(['_setDomainName', 'jiajiao400.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+<script type="text/javascript" src="http://www.jiajiao400.com/js/admin.js"></script>
+<div class="toolbar">
+    <div class="tbbox clearfix">
+        <div class="site_r fr">
+            <div class="login-panel fl"><span class="welcome">客服电话：<span class="red">400-966-0501</span>（接听时间：工作日早9点至晚6点）</span><a
+                    href="/users/login" rel="nofollow" class="green">用户登录</a><span class="line">|</span><span
+                    class="green"><a href="/student/register1" rel="nofollow" class="green">我要请家教</a><span class="line">-</span><a
+                    href="/users/register" rel="nofollow" class="green">我要做家教</a></span></div>
+        </div>
+    </div>
+    <!--tbbox end-->
+</div>
+<!--toolbar end-->
+<div id="header">
+    <div class="hbox">
+        <span class="logo fl"><a href="/"><img src="http://www.jiajiao400.com/images2014/logo.png"
+                                               alt="常青藤家教网"></a></span>
+        <!--city end-->
+        <script type="text/javascript">cityhover('#city_on', '#citylist');</script>
+    </div>
+    <!--header-top end-->
+</div>
+<!--#header end-->
+<div id="jiajiao_nav" class="mb">
+    <div class="nbox">
+        <div class="search_form" onkeydown="BindEntersearch(event)">
+            <form class="form">
+                <div class="input_select_menu"><span class="select_item">家教</span>
+                    <ul class="item_list">
+                        <li><span>家教</span></li>
+                        <li><span>家长</span></li>
+                    </ul>
+                </div>
+                <!--/ input_select_menu-->
+                <input type="text" class="sr" value="请输入关键词..." id="keyword" name="key" autocomplete="off"
+                       onfocus="this.className=' sr'; if(this.value!='请输入关键词...'){this.style.color='#404040';}else{this.value='';this.style.color='#404040'}"
+                       onblur="if(this.value==''){this.value='请输入关键词...';this.style.color='#b6b7b9';this.className='sr';}"
+                       onkeydown="this.style.color='#404040'" style="color: rgb(182, 183, 185);">
+                <input type="button" value="搜索" id="search_btn" class="sub" name=""/>
+            </form>
+            <script type="text/javascript">repselect("input_select_menu");</script>
+        </div>
+        <!--/ search_form-->
+        <ul class="vnavlist clearfix">
+            <li class="sy_title">
+                <div class="menu-button"><a href="/" style="color:#fff">首页</a></div>
+            </li>
+            <li>
+                <div class="menu-button"><a href="/jiajiao/">家教信息库</a></div>
+            </li>
+            <li>
+                <div class="menu-button"><a href="/student/">学员信息</a></div>
+            </li>
+        </ul>
+    </div>
+    <!--/ nbox-->
+</div>
+<script type="text/javascript">
+    function BindEntersearch(obj) {
+        if (obj.keyCode == 13) {
+            var k_type = $(".input_select_menu .select_item").text();
+            var key = $("#nav_word").val();
+            if (key != "请输入关键词...") {
+                if (k_type == "家教") {
+                    var urlto = "/jiajiao/" + "?keyword=" + key;
+                } else {
+                    var urlto = "/student/" + "?keyword=" + key;
+                }
+                window.location.href = urlto;
+            } else {
+                alert("请输入关键词!");
+            }
+            obj.returnValue = false;
+        }
+    }
+
+    $("#nav_search_btn").live("click", function () {
+        var k_type = $(".input_select_menu .select_item").text();
+        var key = $("#nav_word").val();
+        if (key != "请输入关键词...") {
+            if (k_type == "家教") {
+                var urlto = "/jiajiao/" + "?keyword=" + key;
+            } else {
+                var urlto = "/student/" + "?keyword=" + key;
+            }
+            window.location.href = urlto;
+        } else {
+            alert("请输入关键词!");
+        }
+    });
+</script>
+<div id="page" style="margin: 0 auto;width: 960px;">
+    <div class="path">
+    </div>
+    <div class="content">
+        <div class="w180 fl mr">
+            <!--green2-sbox end-->
+            <div class="green2-sbox">
+                <div class="titlebar"><h2 class="tit-h">我的家教网导航</h2></div>
+                <div class="col-detail pa8">
+                    <ul class="user-left-menu">
+                        <!--<li ><a href="/student/viprules">成为付费会员<span style='color:red;font-size:10px;display:inline'>&nbsp;&nbsp;new!</span></a></li>-->
+
+                        <li><a style='display:inline' href="/student/invite">邀请好友</a></li>
+                        <li><a href="/student/passwordmodify">修改密码</a></li>
+                        <li><a href="/student/phoneyz">修改手机</a></li>
+                        <!--<li><a href="/student/modifyinfo">修改个人信息</a></li> -->
+                        <li><a href="/student/zixundan" target="_blank" style='display:inline'>在线咨询</a></li>
+                        <li><a style='display:inline' href="/student/buycredit2">购买积分</a></li>
+                        <li><a href="/student/settel" target="_blank">设置手机是否公开</a></li>
+                        <li><a href="/student/myorder" target="_blank">我的订单</a></li>
+                        <li><a href="/student/mywallet" target="_blank">我的钱包</a></li>
+                        <li><a href="http://www.jiajiao400.com/help/fangpian" target="_blank">提醒您找家教防诈骗</a></li>
+                        <li>
+
+                            <p>
+                                <script type="text/javascript">
+                                    function closetip1() {
+                                        $("#vtip1").hide();
+                                        SetCookie('jiajiaoTIPSP2', 'jiajiao400');
+                                        document.body.removeChild(back);
+                                    }
+
+                                    var childWindow;
+                                    var listen_started = false;
+
+                                    function toQzoneLogin() {
+                                        childWindow = window.open("http://www.jiajiao400.com/qqlogin/oauth/qq_login.php?type=student&status=add", "TencentLogin", "width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+                                        if (!listen_started) {
+                                            setTimeout(refreshSelf, 1000);
+                                        } else {
+                                            listen_started = true;
+                                        }
+                                    }
+
+                                    function refreshSelf() {
+                                        if (!childWindow.closed) {
+                                            setTimeout(refreshSelf, 500);
+                                        } else {
+                                            listen_started = false;
+                                            window.location.reload();
+                                        }
+                                    }
+
+                                    function closeChildWindow() {
+                                        childWindow.close();
+                                    }
+                                </script>
+                                <img src="http://www.jiajiao400.com/qqlogin/img/bd_qq.gif" onclick='toQzoneLogin()'
+                                     style="cursor:pointer;">
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--green2-sbox end--><br/>
+
+            <!--green2-sbox end-->
+            <div class="green2-sbox">
+                <div class="titlebar"><h2 class="tit-h">我的找家教情况</h2></div>
+                <div class="col-detail pa8">
+                    <ul class="user-left-menu">
+                        <li><a href="/student/studentinfoadd">发布招家教信息</a></li>
+                        <li><a href="/student/profilesstudentview">我查看的家教</a></li>
+                        <li><a href="/student/collect">我收藏的家教</a></li>
+                        <!--<li ><a href="/student/profiles#jigouyuyue">我查看的教育机构</a></li>-->
+                        <li><a href="/student/studentshare">发布家教点评</a></li>
+                        <li><a href="/student/visitedexpert">我浏览过的家教</a></li>
+                        <li><a href="/student/yuyuelist">预约我的家教</a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+
+            <div class="green2-sbox">
+                <div class="titlebar"><h2 class="tit-h">我的基本信息</h2></div>
+                <div class="col-detail pa8">
+                    <ul class="user-left-menu">
+                        <!--<li ><a href="/student/modifystudent">修改基本信息</a></li>-->
+                        <li>ID:184687</li>
+                        <!--<li >荣誉值:<span style='color:red;font-size:14px'>0</span><span style='color:blue;cursor:pointer' onclick='sAlert()'>&nbsp;[查看明细]</span></li>-->
+                        <li>区&nbsp;&nbsp;域:市辖区</li>
+                        <li>详细地址:wenzhou</li>
+                        <li>共发布信息数:3</li>
+                        <li>如需修改信息请联系客服</li>
+                    </ul>
+                </div>
+            </div>
+            <!--green2-sbox end-->
+
+
+            <!--green2-sbox end-->
+            <div class="green2-sbox">
+                <div class="titlebar"><h2 class="tit-h">小提示</h2></div>
+                <div class="col-detail pa8">
+                    <ul class="user-left-menu">
+                        <p>家长可优先联系已认证家教</p>
+                        <hr size="1" noshade="noshade"/>
+                        <p>家教经验指数代表成功授课几次</p>
+                        <hr size="1" noshade="noshade"/>
+                        <p>家长可提醒家教上门携带证件</p>
+                        <hr size="1" noshade="noshade"/>
+                        <p>家长可与家教直接商议价格</p>
+                        <hr size="1" noshade="noshade"/>
+                        <p>家长可与家教签订协议，点击<a href="http://www.jiajiao400.com/contract.rar">下载协议范本</a></p>
+                        <hr size="1" noshade="noshade"/>
+                        <p>常青藤客服电话均来自北京，并和您核对ID，如有冒充常青藤客服电话，请家长注意！</p>
+                        <hr size="1" noshade="noshade"/>
+                    </ul>
+                </div>
+            </div>
+            <!--green2-sbox end-->
+            <div class="green2-sbox">
+                <div class="titlebar"><h2 class="tit-h">教育资源频道</h2></div>
+                <div class="col-detail pa8">
+                    <ul class="user-left-menu">
+                        <!--                 <li ><div style='float:left;margin-top:4px;margin-left:7px'><img src="/images/1.gif" /></div><div><a style='display:inline;padding-left:6px' href="/student/profilescreditres">资源文档积分</a></div></li> -->
+                        <li>
+                            <div style='float:left;margin-top:4px;margin-left:7px'><img src="/images/1.gif"/></div>
+                            <div><a style='display:inline;padding-left:6px' href="/student/myresources">我的资源</a>&nbsp;<a
+                                    href='http://www.jiajiao400.com/resources/upload'
+                                    style='color:#666666;display:inline'>上传资料</a></div>
+                        </li>
+                        <li>
+                            <div style='float:left;margin-top:3px;margin-left:7px'><img src="/images/color_swatch.gif"/>
+                            </div>
+                            <div><a style='display:inline;padding-left:6px' href="/student/downloadcount">下载统计</a></div>
+                        </li>
+                        <li>
+                            <div style='float:left;margin-top:5px;margin-left:7px'><img src="/images/comment.gif"/>
+                            </div>
+                            <div><a style='display:inline;padding-left:6px' href="/student/hotresources">热门资源</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--green2-sbox end-->
+
+            <script>
+                function sAlert() {
+                    var msgw, msgh, bordercolor;
+                    msgw = 500;//提示窗口的宽度
+                    msgh = 600;//提示窗口的高度
+                    bordercolor = "#FFFFFF";//提示窗口的边框颜色
+                    titlecolor = "#99CCFF";//提示窗口的标题颜色
+
+                    var sWidth, sHeight;
+                    sWidth = document.body.offsetWidth;
+                    sHeight = document.body.offsetHeight;
+                    var bgObj = document.createElement("div");
+                    bgObj.setAttribute('id', 'bgDiv');
+                    bgObj.style.position = "absolute";
+                    bgObj.style.top = "0";
+                    bgObj.style.background = "#777";
+                    bgObj.style.filter = "progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75";
+                    bgObj.style.opacity = "0.6";
+                    bgObj.style.left = "0";
+                    bgObj.style.width = sWidth + "px";
+                    bgObj.style.height = sHeight + "px";
+                    document.body.appendChild(bgObj);
+                    var msgObj = document.createElement("div")
+                    msgObj.setAttribute("id", "msgDiv");
+                    msgObj.setAttribute("align", "center");
+                    msgObj.style.position = "absolute";
+                    msgObj.style.background = "white";
+                    msgObj.style.font = "12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    msgObj.style.border = "1px solid " + bordercolor;
+                    msgObj.style.width = msgw + "px";
+                    msgObj.style.height = msgh + "px";
+                    msgObj.style.top = (document.documentElement.scrollTop + 150) + "px";
+                    msgObj.style.left = (sWidth - msgw) / 2 + "px";
+                    var title = document.createElement("h4");
+                    title.setAttribute("id", "msgTitle");
+                    title.setAttribute("align", "right");
+                    title.style.margin = "0";
+                    title.style.padding = "3px";
+                    title.style.background = bordercolor;
+                    title.style.filter = "progid:DXImageTransform.Microsoft.Alpha(startX=20, startY=20, finishX=100, finishY=100,style=1,opacity=75,finishOpacity=100);";
+                    title.style.opacity = "0.75";
+                    title.style.border = "1px solid " + bordercolor;
+                    title.style.height = "18px";
+                    title.style.font = "12px Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    title.style.color = "#000000";
+                    title.style.cursor = "pointer";
+                    title.innerHTML = "关闭";
+                    title.onclick = function () {
+                        document.body.removeChild(bgObj);
+                        document.getElementById("msgDiv").removeChild(title);
+                        document.body.removeChild(msgObj);
+                    }
+                    document.body.appendChild(msgObj);
+                    document.getElementById("msgDiv").appendChild(title);
+                    var txt = document.createElement("p");
+                    txt.style.margin = "1em 0"
+                    txt.setAttribute("id", "msgTxt");
+                    txt.innerHTML = '<iframe src="/student/reputationdetail"  frameborder="0" width="100%" height="580" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
+                    document.getElementById("msgDiv").appendChild(txt);
+                }
+            </script>
+        </div> <!-- end of aside -->
+        <div class="w770 fl">
+            <style>
+                .listliover {
+                    background: #999999;
+                }
+
+                #listul li {
+                    list-style: none;
+                }
+
+                .weiyi {
+                    border-top: 1px dotted #CCCCCC;
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 6px
+                }
+
+                .weiyi1 {
+                    border-top: 1px dotted #CCCCCC;
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 6px
+                }
+
+                .wtable th {
+                    line-height: 24px
+                }
+
+                .wtable td {
+                    line-height: 24px
+                }
+
+                .redFor {
+                    color: #666666;
+                    border: 1px solid #ccccc;
+                    height: 30px;
+                    width: 100px;
+                    text-align: center;
+                    line-height: 30px;
+                    float: left;
+                    border-top: 1px solid #F9F9F9;
+                }
+
+                .bgFor {
+                    color: #BF0000;
+                    border-left: 1px solid #F9F9F9;;
+                    border-top: 1px solid #F9F9F9;;
+                    border-right: 1px solid #F9F9F9;;
+                    background-color: #cccccc;
+                    height: 30px;
+                    width: 100px;
+                    text-align: center;
+                    line-height: 30px;
+                    float: left;
+                }
+            </style>
+            <div class='green3-sbox'>
+
+                <div class="titlebar"><h2 class="tit-h">家教信息</h2>
+                </div>
+                <div class="col-detail pa10">
+                    <div id="chakan" class='red weiyi1'>
+                        家教申请
+                    </div>
+                    <div class="c">
+                        <table cellpadding="2" cellspacing="0" width="100%"
+                               style="border:1px solid #00CC66; margin-bottom:10px;">
+                            <tbody th:each="applys:${apply}">
+                            <tr id="jd260041" style="display:none">
+                                <td height="30" colspan="5">
+                                    <span style="float:left">&nbsp; &nbsp;申请人&nbsp; &nbsp;
+                                        <a target="_blank" class="blue" th:text="${applys.getName()}">乔伊</a>
+                                        &nbsp;&nbsp;<span class="ml">联系电话：
+                                            <a href="/jiajiao/260041.html" target="_blank">13616636865</a></span>
+                                        <a href="#"
+                                           onclick="openShutManager('tp260041','tip260041','jd260041','1','dp260041','form_comment260041','form_thank260041')"></a>
+				                    </span>
+                                    <span style="float:right">
+                                        <a href="#"
+                                           onclick="openShutManager('tp260041','tip260041','jd260041','1','dp260041','form_comment260041','form_thank260041')">展开</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr id="tip260041">
+                                <td width="168" rowspan="2" align="center" valign="middle" style='padding-top:2px'><img
+                                        src="http://www.jiajiao400.com/images/img_6.jpg" width="100"/>
+                                    <br/>
+                                    <div><a th:href="${'/getRequest/'+applys.getId()+'/'+user.getId()}">接受家教</a></div>
+                                </td>
+                                <td colspan="4" align="right" valign="middle" style='padding-right:2px'>
+                                    <a href="#"
+                                       onclick="openShutManager('tp260041','tip260041','jd260041','0','dp260041','form_comment260041','form_thank260041')">隐藏</a>
+                                </td>
+                            </tr>
+                            <tr id="tp260041">
+                                <td colspan="4" valign="top" style="line-height:150%;padding-right:2px"><b>申请人</b>&nbsp;
+                                    &nbsp;<a target="_blank" class="blue" th:text="${applys.getName()}">乔伊</a> &nbsp;&nbsp;<br/>
+                                    联系方式：<strong th:text="${applys.getPhone()}"></strong><br/>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-detail pa10" th:if="${user.getTypeid()==1}">
+                    <div id="chakan11" class='red weiyi1'>
+                        家教记录
+                    </div>
+                    <div class="c">
+                        <table cellpadding="2" cellspacing="0" width="100%"
+                               style="border:1px solid #00CC66; margin-bottom:10px;">
+                            <tbody th:each="record:${records}">
+                            <tr id="tip2600411">
+                                <td width="168" rowspan="2" align="center" valign="middle" style='padding-top:2px'><img
+                                        src="http://www.jiajiao400.com/images/img_6.jpg" width="100"/>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr id="tp26004111">
+                                <td colspan="4" valign="top" style="line-height:150%;padding-right:2px"><b>客户信息</b>&nbsp;
+                                    &nbsp;<strong target="_blank" class="blue"
+                                                  th:text="${record.getTeacherid()}">乔伊</strong> &nbsp;&nbsp;<br/>
+                                    家教时间：<strong th:text="${record.getTime().toString()}"></strong>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong th:if="${eve.size() ge 1}">已评价！</strong></td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                        <form id="form_comment" name="form_comment" action="/star"
+                              method="post" enctype="multipart/form-data" style="display: block;" >
+                            <table class="table_green" cellpadding="5" cellspacing="0" width="100%"  th:if="${eve.size() lt  1}">
+                                <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="notice">
+                                            <div class="notice-top"></div>
+                                            <div class="notice-body">
+                                                <p>非常希望在一段教学过后，家长能给该家教进行一些点评，您的评价或感谢将为其他家长提供重要参考！</p>
+                                            </div>
+                                            <div class="notice-bottom"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" width="25%" height="30">
+                                        <label>学习过程&nbsp;</label>
+                                    </td>
+                                    <input type="hidden" name="userid" th:value="${records.get(0).getParentid()}"/>
+                                    <input type="hidden" name="infoid" th:value="${records.get(0).getTeacherid()}"/>
+                                    <td align="left" width="75%">
+                                        <textarea id="comment_content" name="comment" style="width: 400px; height: 125px"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" width="25%" height="30">
+                                        <label>综合评价&nbsp;</label></td>
+                                    <td align="left" width="75%">
+                                        <select id="comment_evaluation" name="star">
+                                            <option value="0">请选择</option>
+                                            <option value="5">很满意</option>
+                                            <option value="4">满意</option>
+                                            <option value="3">一般</option>
+                                            <option value="2">不满意</option>
+                                            <option value="1">还不知道</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="submit" id="submit_comment" class="submit_style1" value="提交"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                function submitcomemt(jigou_id) {
+                    var comemt = 1;
+                    $("input[name='comemt']").each(function () {
+                        if ($(this).attr("checked")) {
+                            comemt = $(this).val();
+                        }
+                    });
+                    var content = $('#contents').val();
+                    if (content.length < 5) {
+                        alert('评论内容不能少于5个字');
+                        return false;
+                    }
+                    $.ajax({
+                        type: 'post',
+                        url: "/jigous/comemt",
+                        data: {
+                            comemt: comemt,
+                            content: content,
+                            jigou_id: jigou_id
+                        },
+                        success: function (data) {
+                            if (data == 1) {
+                                alert('提交成功！')
+                                $('#contents').val('');
+                            } else if (data == 2) {
+                                alert('您没有跟该机构进行过接触，没有权限评论！')
+                            } else if (data == 3) {
+                                alert('只有登录的家长/家教才能进行评论！');
+                            } else if (data == 4) {
+                                alert('每天只能评论一次！')
+                            }
+                        }
+
+                    });
+                    return false;
+                }
+
+                function openShutManager(oSourceObj, oTargetObj, oTargetObj2, shutAble, oTargetObj3, comment_form, think_form) {
+                    if (shutAble == '0') {
+                        $('#' + oTargetObj).hide()
+                        $('#' + oSourceObj).hide()
+                        $('#' + oTargetObj3).hide()
+                        $('#' + comment_form).hide()
+                        $('#' + think_form).hide()
+                        $('#' + oTargetObj2).show()
+                    } else {
+                        $('#' + oTargetObj).show()
+                        $('#' + oSourceObj).show()
+                        $('#' + oTargetObj3).show()
+                        $('#' + comment_form).show()
+//$('#'+think_form).show()
+                        $('#' + oTargetObj2).hide()
+                    }
+                }
+            </script>
+
+            <script type="text/javascript">
+                // 家长标注家教授课成功
+                function addSuccess(expert_id, content) {
+                    //var impression_content = $.trim($('#'+content).val());
+
+                    if (!expert_id) {
+                        alert('请选择对应家教');
+                        $('#addSccess').focus();
+                        return false;
+                    }
+                    $.get("/student/addsccess?student_id=184687", {
+                        content: content,
+                        expert_id: expert_id
+                    }, function (data) {
+                        if (2 == data) {
+                            alert('请选择对应家教');
+                        } else if (1 == data) {
+                            //$('#can_impression').text(0);
+                            alert('确定由该家教授课成功！');
+                            window.location.reload();
+                        } else if (3 == data) {
+                            alert('取消由该家教授课成功！');
+                            window.location.reload();
+                        } else {
+                            alert('添加失败，请联系管理员处理');
+                        }
+                    });
+                    return false;
+                }
+
+                //预约我的家教
+                function addSuccessme(expert_id, content, student_id) {
+                    //var impression_content = $.trim($('#'+content).val());
+
+                    if (!expert_id) {
+                        alert('请选择对应家教');
+                        //$('#addSccess').focus();
+                        return false;
+                    }
+                    $.get("/student/addsccessme", {
+                        content: content,
+                        expert_id: expert_id,
+                        student_id: student_id
+                    }, function (data) {
+                        if (2 == data) {
+                            alert('请选择对应家教');
+                        } else if (1 == data) {
+                            //$('#can_impression').text(0);
+                            alert('确定由该家教授课成功！');
+                            window.location.reload();
+                        } else if (3 == data) {
+                            alert('取消由该家教授课成功！');
+                            window.location.reload();
+                        } else {
+                            alert('添加失败，请联系管理员处理');
+                        }
+                    });
+                    return false;
+                }
+
+                //查看我电话的家教
+                function addSuccesstel(expert_id, content, student_id) {
+                    //var impression_content = $.trim($('#'+content).val());
+
+                    if (!expert_id) {
+                        alert('请选择对应家教');
+                        //$('#addSccess').focus();
+                        return false;
+                    }
+                    $.get("/student/addsccesstel", {
+                        content: content,
+                        expert_id: expert_id,
+                        student_id: student_id
+                    }, function (data) {
+                        if (2 == data) {
+                            alert('请选择对应家教');
+                        } else if (1 == data) {
+                            //$('#can_impression').text(0);
+                            alert('确定由该家教授课成功！');
+                            window.location.reload();
+                        } else if (3 == data) {
+                            alert('取消由该家教授课成功！');
+                            window.location.reload();
+                        } else {
+                            alert('添加失败，请联系管理员处理');
+                        }
+                    });
+                    return false;
+                }
+
+                //查看我电话的机构
+                function addSuccessjigou(jigou_id, content, student_id) {
+                    if (!jigou_id) {
+                        alert('请选择对应机构');
+                        return false;
+                    }
+                    $.get("/student/addsccessjigou", {
+                        content: content,
+                        jigou_id: jigou_id,
+                        student_id: student_id
+                    }, function (data) {
+                        if (2 == data) {
+                            alert('请选择对应机构');
+                        } else if (1 == data) {
+                            alert('确定由该机构授课成功！');
+                            window.location.reload();
+                        } else if (3 == data) {
+                            alert('取消由该机构授课成功！');
+                            window.location.reload();
+                        } else {
+                            alert('添加失败，请联系管理员处理');
+                        }
+                    });
+                    return false;
+                }
+
+                //我查看机构电话
+                function addSuccessjigoutel(jigou_id, content, student_id) {
+                    if (!jigou_id) {
+                        alert('请选择对应机构');
+                        return false;
+                    }
+                    $.get("/student/addsccessjigoutel", {
+                        content: content,
+                        jigou_id: jigou_id,
+                        student_id: student_id
+                    }, function (data) {
+                        if (2 == data) {
+                            alert('请选择对应机构');
+                        } else if (1 == data) {
+                            alert('确定由该机构授课成功！');
+                            window.location.reload();
+                        } else if (3 == data) {
+                            alert('取消由该机构授课成功！');
+                            window.location.reload();
+                        } else {
+                            alert('添加失败，请联系管理员处理');
+                        }
+                    });
+                    return false;
+                }
+
+                // 添加印象
+                function addImpression(expert_id, content, div) {
+                    var impression_content = $.trim($('#' + content).val());
+                    //alert(impression_content);
+                    if (!expert_id) {
+                        alert('请选择对应家教');
+                        return false;
+                    }
+                    if (!impression_content) {
+                        alert('印象不能为空');
+                        return false;
+                    }
+                    $.get("/experts/addimpression?student_id=184687", {
+                        content: impression_content,
+                        expert_id: expert_id
+                    }, function (data) {
+                        if (3 == data) {
+                            alert('你没有权限评价该家教');
+                        } else if (2 == data) {
+                            alert('24小时内只能添加一次印象');
+                        } else if (1 == data) {
+                            $('#can_impression').text(0);
+                            alert('添加印象成功');
+                            window.location.reload();
+                        } else {
+                            alert('添加失败，请联系管理员处理');
+                        }
+                    });
+                    return false;
+                }
+
+                // 添加印象
+                function addcommentform(expert_id, div, type, thisform) {
+                    if (type == 1) {
+                        var subject_id = $.trim($('#' + div + ' #comment_subject_id').val());
+                        var content = $.trim($('#' + div + ' #comment_content').val());
+                        var evaluation = $.trim($('#' + div + ' #comment_evaluation').val());
+                        var selected_vals = '';
+                        $('#' + div + ' #comment_character_id_label > input').each(function () {
+                            if ($(this).attr('checked')) {
+                                selected_vals += $(this).val() + ','
+                            }
+                        });
+                        if (evaluation == 0) {
+                            alert('综合评价不能为空');
+                            return false;
+                        }
+                    } else {
+                        var subject_id = $.trim($('#' + div + ' #thank_subject_id').val());
+                        var content = $.trim($('#' + div + ' #thank_content').val());
+                        var evaluation = '';
+                        var selected_vals = '';
+                        $('#' + div + ' #thank_character_id_label > input').each(function () {
+                            if ($(this).attr('checked')) {
+                                selected_vals += $(this).val() + ','
+                            }
+                        });
+
+                    }
+                    if (subject_id == 0) {
+                        alert('请选择学科名称');
+                        return false;
+                    }
+                    if (!content) {
+                        alert('好评内容不能为空');
+                        return false;
+                    }
+                    if (content.length < 70) {
+                        alert('好评内容不能少于50个字');
+                        return false;
+                    }
+                    if (!selected_vals) {
+                        alert('请选择学生特点');
+                        return false;
+                    }
+                    thisform.disabled = true; //按钮禁用
+                    thisform.value = "正在提交……";
+                    $.get("/experts/addcomment?student_id=184687", {
+                        subject_id: subject_id,
+                        content: content,
+                        evaluation: evaluation,
+                        selected_vals: selected_vals,
+                        expert_id: expert_id,
+                        type: type
+                    }, function (data) {
+                        if (3 == data) {
+                            alert('你没有权限评价该家教');
+                        } else if (2 == data) {
+                            alert('请选择学科名称');
+                        } else if (1 == data) {
+                            alert('添加好评成功');
+                            window.location.reload();
+                        } else {
+                            alert('添加失败，请联系管理员处理');
+                        }
+                    });
+                    return false;
+                }
+
+                function viewinfo(id) {
+
+                    //window.location.href=id+'.html';
+                    window.open('../jiajiao/' + id + '.html', '');
+
+                }
+
+                var max_choices = 3;
+
+                function phoneNum(container, user_id) {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/users/viewphonenum',
+                        data: {user_id: user_id},
+                        success: function (data) {
+                            container.html("");
+                            container.after("-手机号，联系时请说明来自常青藤名师在线。接洽时请注意查看相关证件。谢谢！");
+                            container.after(data);
+                        },
+                        error: function () {
+                            alert('error');
+                        }
+                    });
+                }
+
+                function countChecked() {
+                    var n = $(":checkbox:checked").length;
+                    if (n == max_choices) {
+                        alert("最多选3项");
+                        $(":checkbox:not(:checked)").attr("disabled", true);
+                    } else
+                        $(":checkbox:not(:checked)").attr("disabled", false);
+                }
+
+                function show_all(id) {
+                    var same = '#case_some_' + id;
+                    var all = '#case_all_' + id;
+                    $(same).hide();
+                    $(all).show();
+                }
+
+
+                function alterUC(eID) {
+                    $("#form_comment").hide();
+                    $("#form_thank").hide();
+                    if (eID == '1') {
+                        $("#form_comment").show();
+                    }
+                    if (eID == '2') {
+                        $("#form_thank").show();
+                    }
+
+                }
+            </script>
+            <script type="text/javascript">
+                function delSysMessage(id) {
+                    if (confirm("确认删除此消息？")) {
+                        $("#sysmsg_" + id).fadeOut(200);
+                        $.ajax({
+                            type: "GET",
+                            url: "/student/deletesysmessage",
+                            dataType: "json",
+                            data: {message_id: id},
+                            success: function (data) {
+                                if (data.id) {
+                                    $("#sysmsg_" + data.id).hide();
+                                    $("#sysmsg_" + id).after('<p id=\"sysmsg_' + data.id + '\">' + data.content + ' 发布时间：' + data.create_time + '<img class="right" src="http://www.jiajiao400.com/images/close.gif" onclick="return delSysMessage(' + data.id + ');"></p>');
+                                }
+                            },
+                            error: function () {
+                                alert('error');
+                            }
+                        });
+                    }
+                }
+
+                //学员信息置顶
+                function news_zhiding(id) {
+                    if (confirm("置顶该信息，需要扣除您100积分,信息将置顶三天,您确定要置顶吗?")) {
+                        $.ajax({
+                            type: 'post',
+                            url: '/student/newszhiding',
+                            data: {
+                                infoid: id
+                            },
+                            success: function (data) {
+                                if (data == 0) {
+                                    alert("置顶成功,该信息将置顶三天");
+                                    window.location.reload();
+                                } else {
+                                    if (data == 1) {
+                                        alert("该信息的状态不是可预约状态，不能置顶！");
+                                    } else if (data == 3) {
+                                        alert("积分不足");
+                                    } else {
+                                        alert('该信息不存在！');
+                                    }
+                                }
+                            },
+                            error: function () {
+                                alert('error');
+                            }
+                        });
+                    } else {
+                        return false;
+                    }
+                }
+
+                function sAlerts(str) {
+                    var msgw, msgh, bordercolor;
+                    msgw = 500;//提示窗口的宽度
+                    msgh = 600;//提示窗口的高度
+                    bordercolor = "#FFFFFF";//提示窗口的边框颜色
+                    titlecolor = "#99CCFF";//提示窗口的标题颜色
+
+                    var sWidth, sHeight;
+                    sWidth = document.body.offsetWidth;
+                    sHeight = document.body.offsetHeight;
+                    var bgObj = document.createElement("div");
+                    bgObj.setAttribute('id', 'bgDiv');
+                    bgObj.style.position = "absolute";
+                    bgObj.style.top = "0";
+                    bgObj.style.background = "#777";
+                    bgObj.style.filter = "progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75";
+                    bgObj.style.opacity = "0.6";
+                    bgObj.style.left = "0";
+                    bgObj.style.width = sWidth + "px";
+                    bgObj.style.height = sHeight + "px";
+                    document.body.appendChild(bgObj);
+                    var msgObj = document.createElement("div")
+                    msgObj.setAttribute("id", "msgDiv");
+                    msgObj.setAttribute("align", "center");
+                    msgObj.style.position = "absolute";
+                    msgObj.style.background = "white";
+                    msgObj.style.font = "12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    msgObj.style.border = "1px solid " + bordercolor;
+                    msgObj.style.width = msgw + "px";
+                    msgObj.style.height = msgh + "px";
+                    msgObj.style.top = (document.documentElement.scrollTop + 150) + "px";
+                    msgObj.style.left = (sWidth - msgw) / 2 + "px";
+                    var title = document.createElement("h4");
+                    title.setAttribute("id", "msgTitle");
+                    title.setAttribute("align", "right");
+                    title.style.margin = "0";
+                    title.style.padding = "3px";
+                    title.style.background = bordercolor;
+                    title.style.filter = "progid:DXImageTransform.Microsoft.Alpha(startX=20, startY=20, finishX=100, finishY=100,style=1,opacity=75,finishOpacity=100);";
+                    title.style.opacity = "0.75";
+                    title.style.border = "1px solid " + bordercolor;
+                    title.style.height = "18px";
+                    title.style.font = "12px Verdana, Geneva, Arial, Helvetica, sans-serif";
+                    title.style.color = "#000000";
+                    title.style.cursor = "pointer";
+                    title.innerHTML = "关闭";
+                    title.onclick = function () {
+                        document.body.removeChild(bgObj);
+                        document.getElementById("msgDiv").removeChild(title);
+                        document.body.removeChild(msgObj);
+                    }
+                    document.body.appendChild(msgObj);
+                    document.getElementById("msgDiv").appendChild(title);
+                    var txt = document.createElement("p");
+                    txt.style.margin = "1em 0"
+                    txt.setAttribute("id", "msgTxt");
+                    txt.innerHTML = '<iframe src="/student/creditdetail" frameborder="0" width="100%" height="580" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
+                    document.getElementById("msgDiv").appendChild(txt);
+                }
+            </script>
+            <br/>
+        </div> <!-- end of main -->
+    </div>
+</div>
+<div class="clear"></div>
+
+<div id="footer">
+    <div class="fbox mt15">
+        <div class="links">
+            <a href="http://www.jiajiao400.com/help/about" rel="nofollow" target="_blank">关于我们</a> | <a
+                href="http://www.jiajiao400.com/help/agreement" rel="nofollow" target="_blank">使用协议</a> | <a
+                href="http://www.jiajiao400.com/help/contact" rel="nofollow" target="_blank">联系我们</a> | <a
+                href="http://www.jiajiao400.com/help/job" rel="nofollow" target="_blank">招贤纳士</a> | <a
+                href="http://www.jiajiao400.com/help/sitemap" target="_blank">站点地图</a> | <a
+                href="http://www.jiajiao400.com/" target="_blank">常青藤</a><a href="http://www.jiajiao400.com/"
+                                                                            target="_blank">家教网</a>| <a
+                href="http://www.jiajiao400.com/xueke/" target="_blank">学科</a></div>
+        <div class="copyright">Copyright @ 2014-2015 常青藤 All Rights Reserved 京ICP备11015892号
+            联系我们：service@jiajiao400.com
+        </div>
+        <div class="pimg">
+            <img src="http://www.jiajiao400.com/images/foot1.png" width="120" height="50" border="0" alt="北京网络警察报警平台"
+                 style="border:1px solid #cccccc;"> <img src="http://www.jiajiao400.com/images/foot2.png" width="120"
+                                                         height="50" style="border:1px solid #cccccc;margin:0 10px;"
+                                                         alt="公共信息安全网络监察"> <img
+                src="http://www.jiajiao400.com/images/foot4.png" width="120" height="50" border="0"
+                style="border:1px solid #cccccc;" alt="不良信息举报中心">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18175558-1']);
+    _gaq.push(['_addOrganic', 'm.baidu', 'word']);
+    _gaq.push(['_addOrganic', 'wap.baidu', 'word']);
+    _gaq.push(['_addOrganic', 'baidu.mobi', 'word']);
+    _gaq.push(['_addOrganic', 'image.baidu', 'word']);
+    _gaq.push(['_addOrganic', 'baidu', 'wd']);
+    _gaq.push(['_addOrganic', 'baidu', 'word']);
+    _gaq.push(['_addOrganic', 'baidu', 'kw']);
+    _gaq.push(['_addOrganic', 'baidu', 'q1']);
+    _gaq.push(['_addOrganic', 'baidu', 'q2']);
+    _gaq.push(['_addOrganic', 'baidu', 'q3']);
+    _gaq.push(['_addOrganic', 'baidu', 'q4']);
+    _gaq.push(['_addOrganic', 'baidu', 'q5']);
+    _gaq.push(['_addOrganic', 'baidu', 'q6']);
+    _gaq.push(['_addOrganic', 'image.soso', 'w']);
+    _gaq.push(['_addOrganic', 'wap.soso', 'key']);
+    _gaq.push(['_addOrganic', 'soso', 'w']);
+    _gaq.push(['_addOrganic', 'bing', 'q']);
+    _gaq.push(['_addOrganic', 'youdao', 'q']);
+    _gaq.push(['_addOrganic', 'so.360', 'q']);
+    _gaq.push(['_addOrganic', 'so', 'q']);
+    _gaq.push(['_addOrganic', '360', 'q']);
+    _gaq.push(['_addOrganic', 'image.so', 'q']);
+    _gaq.push(['_addOrganic', 'pic.sogou', 'query']);
+    _gaq.push(['_addOrganic', 'wap.sogou', 'keyword']);
+    _gaq.push(['_addOrganic', 'm.sogou', 'keyword']);
+    _gaq.push(['_addOrganic', 'sogou', 'query']);
+    _gaq.push(['_setDomainName', 'jiajiao400.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?39af567ee873406fd32bd45cac528457";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript">
+    function delMessage() {
+        $("#msg").fadeOut("2000");
+    }
+
+    $(function () {
+        $('#student_reserveme, #student_profiles').click(function () {
+            var th = $(this);
+            $('#global_showbox').dialog({
+                bgiframe: true,
+                modal: true,
+                width: 450,
+                height: 520,
+                open: function () {
+                    $('#global_showbox').html('<iframe src="' + th.attr('href') + '" frameborder="0" width="100%" height="450" scrolling="no" marginheight="0" marginwidth="0"></iframe>');
+                }
+            });
+            return false;
+        });
+    });
+</script>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F33fe0d7feaa8062958cee3f23d1553ff' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+    <!--
+    function bookmark(title, url) {
+        if (document.all) {
+            window.external.AddFavorite(url, title);
+        } else if (window.sidebar) {
+            window.sidebar.addPanel(title, url, "")
+        } else if (window.opera && window.print) {
+            var addbm = document.getElementById('addBookmark');
+            addbm.setAttribute('rel', 'sidebar');
+            addbm.setAttribute('href', url);
+            addbm.setAttribute('title', title);
+            addbm.click();
+        } else {
+            alert("加入收藏失败，请按CTRL+D来手工添加!");
+        }
+    }
+
+    //-->
+</SCRIPT>
+</body>
+</html>
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>龙腾路小学英语家教,乔伊验证ID260041-温州常青藤家教网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="温州家教网，专职家教乔伊的介绍：英语专业八级，普通话二甲，教师资格，bec商务英语中级，ettbl笔译二级
+教育机构工作，有经验。">
+    <meta name="keywords" content="温州找小学英语家教,">
+    <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/global_default.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css2014/jiajiao400_layout.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/ui-lightness/jquery-ui-1.8.7.custom.css">
+    <link rel="shortcut icon" href="http://www.jiajiao400.com/images/favicon.ico"/>
+    <!-- <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/assist.css">
+   <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/uc.css">
+   <link rel="stylesheet" type="text/css" href="http://www.jiajiao400.com/css/upload.css" /> -->
+    <script type="text/javascript" src="http://www.jiajiao400.com/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://www.jiajiao400.com/js2014/unslider.js"></script>
+    <script type="text/javascript" src="http://www.jiajiao400.com/js/jquery-ui-1.8.7.custom.min.js"></script>
+    <script type="text/javascript" src="http://www.jiajiao400.com/js/admin2.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="http://www.jiajiao400.com/js/admin.js"></script>
+<div class="toolbar">
+    <div class="tbbox clearfix">
+        <div class="site_r fr">
+            <div class="login-panel fl"><span class="welcome">客服电话：<span class="red">400-966-0501</span>（接听时间：工作日早9点至晚6点）</span><a
+                    href="/users/login" rel="nofollow" class="green">用户登录</a><span class="line">|</span><span
+                    class="green"><a href="/student/register1" rel="nofollow" class="green">我要请家教</a><span class="line">-</span><a
+                    href="/users/register" rel="nofollow" class="green">我要做家教</a></span></div>
+        </div>
+    </div>
+    <!--tbbox end-->
+</div>
+<!--toolbar end-->
+<div id="header">
+    <div class="hbox">
+        <span class="logo fl"><a href="/"><img src="http://www.jiajiao400.com/images2014/logo.png"
+                                               alt="常青藤家教网"></a></span>
+        <!--city end-->
+        <script type="text/javascript">cityhover('#city_on', '#citylist');</script>
+    </div>
+    <!--header-top end-->
+</div>
+<!--#header end-->
+<div id="jiajiao_nav" class="mb">
+    <div class="nbox">
+        <div class="search_form" onkeydown="BindEntersearch(event)">
+            <form class="form">
+                <div class="input_select_menu"><span class="select_item">家教</span>
+                    <ul class="item_list">
+                        <li><span>家教</span></li>
+                        <li><span>家长</span></li>
+                    </ul>
+                </div>
+                <!--/ input_select_menu-->
+                <input type="text" class="sr" value="请输入关键词..." id="keyword" name="key" autocomplete="off"
+                       onfocus="this.className=' sr'; if(this.value!='请输入关键词...'){this.style.color='#404040';}else{this.value='';this.style.color='#404040'}"
+                       onblur="if(this.value==''){this.value='请输入关键词...';this.style.color='#b6b7b9';this.className='sr';}"
+                       onkeydown="this.style.color='#404040'" style="color: rgb(182, 183, 185);">
+                <input type="button" value="搜索" id="search_btn" class="sub" name=""/>
+            </form>
+            <script type="text/javascript">repselect("input_select_menu");</script>
+        </div>
+        <!--/ search_form-->
+        <ul class="vnavlist clearfix">
+            <li class="sy_title">
+                <div class="menu-button"><a href="/" style="color:#fff">首页</a></div>
+            </li>
+            <li>
+                <div class="menu-button"><a href="/jiajiao/">家教信息库</a></div>
+            </li>
+            <li>
+                <div class="menu-button"><a href="/student/">学员信息</a></div>
+            </li>
+        </ul>
+    </div>
+    <!--/ nbox-->
+</div>
+<script type="text/javascript">
+    function BindEntersearch(obj) {
+        if (obj.keyCode == 13) {
+            var k_type = $(".input_select_menu .select_item").text();
+            var key = $("#nav_word").val();
+            if (key != "请输入关键词...") {
+                if (k_type == "家教") {
+                    var urlto = "/jiajiao/" + "?keyword=" + key;
+                } else {
+                    var urlto = "/student/" + "?keyword=" + key;
+                }
+                window.location.href = urlto;
+            } else {
+                alert("请输入关键词!");
+            }
+            obj.returnValue = false;
+        }
+    }
+
+    $("#nav_search_btn").live("click", function () {
+        var k_type = $(".input_select_menu .select_item").text();
+        var key = $("#nav_word").val();
+        if (key != "请输入关键词...") {
+            if (k_type == "家教") {
+                var urlto = "/jiajiao/" + "?keyword=" + key;
+            } else {
+                var urlto = "/student/" + "?keyword=" + key;
+            }
+            window.location.href = urlto;
+        } else {
+            alert("请输入关键词!");
+        }
+    });
+</script>
+<div id="page" style="margin: 0 auto;width: 960px;">
+    <div class="content" style="text-align:center;margin:0 auto;">
+        <div class="w770 fl" style="text-align:center;margin:0 auto;">
+            <div class="green3-sbox" style="text-align:center;margin:0 auto;">
+                <div class="col-detail pa10" style="text-align:center;margin:0 auto;">
+                    <div class="kyyinfo" style="margin-top: 5px; padding: 0px 15px 5px; display: block;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-result" style="margin-top: 5px;">
+                            <tbody>
+                            <tr>
+                                <th>编号</th>
+                                <th>用户名</th>
+                                <th>密码</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>电子邮箱</th>
+                                <th>类型</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr th:each="users:${user}">
+                                <td th:text="${users.getId()}"></td>
+                                <td th:text="${users.getUsername()}"></td>
+                                <td th:text="${users.getPassword()}"></td>
+                                <td th:text="${users.getName()}"></td>
+                                <td th:text="${users.getPhone()}"></td>
+                                <td th:text="${users.getEmail()}"></td>
+                                <td th:text="${users.getTypeid()}"></td>
+                                <td>
+                                    <a th:href="${'/passUser/'+users.getId()}">通过</a>
+                                    <a th:href="${'/failUser/'+users.getId()}">失败</a>
+                                </td>
+                            </tr>
+                            </tbody></table>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-result" style="margin-top: 5px;">
+                            <tbody><tr>
+                                <th>编号</th>
+                                <th>用户编号</th>
+                                <th>年级</th>
+                                <th>课程</th>
+                                <th>时间段</th>
+                                <th>金额</th>
+                                <th>备注</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr th:each="infos:${info}">
+                                <td th:text="${infos.getId()}"></td>
+                                <td th:text="${infos.getUserid()}"></td>
+                                <td th:text="${infos.getGradeid()}"></td>
+                                <td th:text="${infos.getCourseid()}"></td>
+                                <td th:text="${infos.getPeriod()}"></td>
+                                <td th:text="${infos.getMoney()}"></td>
+                                <td th:text="${infos.getRemark()}"></td>
+                                <td>
+                                    <a th:href="${'/passInfo/'+infos.getId()}">通过</a>
+                                    <a th:href="${'/failInfo/'+infos.getId()}">失败</a>
+                                </td>
+                            </tr>
+
+                            </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="clear"></div>
+
+<div id="footer">
+    <div class="fbox mt15">
+        <div class="links">
+            <a href="http://www.jiajiao400.com/help/about" rel="nofollow" target="_blank">关于我们</a> | <a
+                href="http://www.jiajiao400.com/help/agreement" rel="nofollow" target="_blank">使用协议</a> | <a
+                href="http://www.jiajiao400.com/help/contact" rel="nofollow" target="_blank">联系我们</a> | <a
+                href="http://www.jiajiao400.com/help/job" rel="nofollow" target="_blank">招贤纳士</a> | <a
+                href="http://www.jiajiao400.com/help/sitemap" target="_blank">站点地图</a> | <a
+                href="http://www.jiajiao400.com/" target="_blank">常青藤</a><a href="http://www.jiajiao400.com/"
+                                                                            target="_blank">家教网</a>| <a
+                href="http://www.jiajiao400.com/xueke/" target="_blank">学科</a></div>
+        <div class="copyright">Copyright @ 2014-2015 常青藤 All Rights Reserved 京ICP备11015892号
+            联系我们：service@jiajiao400.com
+        </div>
+        <div class="pimg">
+            <img src="http://www.jiajiao400.com/images/foot1.png" width="120" height="50" border="0" alt="北京网络警察报警平台"
+                 style="border:1px solid #cccccc;"> <img src="http://www.jiajiao400.com/images/foot2.png" width="120"
+                                                         height="50" style="border:1px solid #cccccc;margin:0 10px;"
+                                                         alt="公共信息安全网络监察"> <img
+                src="http://www.jiajiao400.com/images/foot4.png" width="120" height="50" border="0"
+                style="border:1px solid #cccccc;" alt="不良信息举报中心">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18175558-1']);
+    _gaq.push(['_addOrganic', 'm.baidu', 'word']);
+    _gaq.push(['_addOrganic', 'wap.baidu', 'word']);
+    _gaq.push(['_addOrganic', 'baidu.mobi', 'word']);
+    _gaq.push(['_addOrganic', 'image.baidu', 'word']);
+    _gaq.push(['_addOrganic', 'baidu', 'wd']);
+    _gaq.push(['_addOrganic', 'baidu', 'word']);
+    _gaq.push(['_addOrganic', 'baidu', 'kw']);
+    _gaq.push(['_addOrganic', 'baidu', 'q1']);
+    _gaq.push(['_addOrganic', 'baidu', 'q2']);
+    _gaq.push(['_addOrganic', 'baidu', 'q3']);
+    _gaq.push(['_addOrganic', 'baidu', 'q4']);
+    _gaq.push(['_addOrganic', 'baidu', 'q5']);
+    _gaq.push(['_addOrganic', 'baidu', 'q6']);
+    _gaq.push(['_addOrganic', 'image.soso', 'w']);
+    _gaq.push(['_addOrganic', 'wap.soso', 'key']);
+    _gaq.push(['_addOrganic', 'soso', 'w']);
+    _gaq.push(['_addOrganic', 'bing', 'q']);
+    _gaq.push(['_addOrganic', 'youdao', 'q']);
+    _gaq.push(['_addOrganic', 'so.360', 'q']);
+    _gaq.push(['_addOrganic', 'so', 'q']);
+    _gaq.push(['_addOrganic', '360', 'q']);
+    _gaq.push(['_addOrganic', 'image.so', 'q']);
+    _gaq.push(['_addOrganic', 'pic.sogou', 'query']);
+    _gaq.push(['_addOrganic', 'wap.sogou', 'keyword']);
+    _gaq.push(['_addOrganic', 'm.sogou', 'keyword']);
+    _gaq.push(['_addOrganic', 'sogou', 'query']);
+    _gaq.push(['_setDomainName', 'jiajiao400.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?39af567ee873406fd32bd45cac528457";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<script type="text/javascript">
+    (function () {
+        var uls = document.getElementsByTagName('ul');
+        var tabs = [];
+        for (var i = 0; i < uls.length; i++) {
+            if (uls[i].className == 'tabs') {
+                var li = uls[i].getElementsByTagName('li');
+                for (var n = 0; n < li.length; n++) {
+                    if (li[n].className != 'no') {
+                        tabs.push(li[n]);
+                    }
+
+                }
+            }
+        }
+        //alert(tabs.length);
+        if (tabs.length > 0) {
+            for (var m = 0; m < tabs.length; m++) {
+                switchTab(tabs[m]);
+            }
+        }
+
+        function switchTab(ele) {
+            ele.onclick = function () {
+                var lis = this.parentNode.getElementsByTagName('li');
+                //	alert(lis.length);
+                for (var k = 0; k < lis.length; k++) {
+                    lis[k].className = '';
+                }
+                ele.className = 'on';
+            }
+        }
+    })();
+
+    function delMessage() {
+        $("#msg").fadeOut("2000");
+    }
+
+    $(function () {
+        $('#student_reserveme, #student_profiles, #student_profilesright').click(function () {
+            var th = $(this);
+            $('#global_showbox').dialog({
+                bgiframe: true,
+                modal: true,
+                width: 450,
+                height: 520,
+                open: function () {
+                    $('#global_showbox').html('<iframe src="' + th.attr('href') + '" frameborder="0" width="100%" height="450" scrolling="no" marginheight="0" marginwidth="0"></iframe>');
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=1&amp;pos=left&amp;uid=587978"></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    var bds_config = {"bdTop": 250};
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+</script>
+<!-- Baidu Button END -->
+<div id="winpop"></div>
+<script>var url_xinxi = "/student/getxinxi";
+var url_type = 3;</script>
+<script type="text/javascript" src="http://www.jiajiao400.com/js/youxia.js"></script>
+</body>
+</html>
